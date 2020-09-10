@@ -1,0 +1,33 @@
+{% set build_version = "2.0.5" %}
+
+package:
+  name: jpeg-turbo
+  version: {{ build_version }}
+
+source:
+  git_url: https://github.com/libjpeg-turbo/libjpeg-turbo
+  git_rev: {{ build_version }}
+
+build:
+  number: 1
+
+requirements:
+  build: 
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - autoconf {{ autoconf }}
+    - automake {{ automake }}
+    - libtool {{ libtool }}
+    - cmake {{ cmake }}
+    - make {{ make }}
+    - nasm {{ nasm }} # [x86_64]
+
+about:
+  home: http://www.libjpeg-turbo.org/
+  license: IJG, modified 3-clause BSD and zlib
+  license_file: LICENSE.md
+  summary: IJG JPEG compliant runtime library with SIMD and other optimizations
+
+extra:
+  recipe-maintainers:
+    - open-ce/open-ce-dev-team
