@@ -15,11 +15,11 @@ requirements:
   build: 
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - autoconf {{ autoconf }}
-    - automake {{ automake }}
-    - libtool {{ libtool }}
+    - autoconf
+    - automake
+    - libtool
     - cmake {{ cmake }}
-    - make {{ make }}
+    - make
     - nasm {{ nasm }} # [x86_64]
 
 about:
