@@ -9,18 +9,25 @@ source:
   git_rev: {{ build_version }}
 
 build:
-  number: 2
+  number: 3
 
 requirements:
   build: 
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    # Use pins to control cos6/cos7 match
+    - libgcc-ng  {{ libgcc }}
+    - libstdcxx-ng  {{ libstdcxx }}
     - autoconf
     - automake
     - libtool
     - cmake {{ cmake }}
     - make
     - nasm {{ nasm }} # [x86_64]
+  host:
+    # Use pins to control cos6/cos7 match
+    - libgcc-ng  {{ libgcc }}
+    - libstdcxx-ng  {{ libstdcxx }}
 
 about:
   home: http://www.libjpeg-turbo.org/
