@@ -29,6 +29,12 @@ requirements:
     - libgcc-ng  {{ libgcc }}
     - libstdcxx-ng  {{ libstdcxx }}
 
+test:
+  requires:
+    # Use pins to control cos6/cos7 match
+    - libgcc-ng  {{ libgcc }}
+    - libstdcxx-ng  {{ libstdcxx }}
+
 about:
   home: http://www.libjpeg-turbo.org/
   license: IJG, modified 3-clause BSD and zlib
