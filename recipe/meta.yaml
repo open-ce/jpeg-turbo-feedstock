@@ -9,10 +9,7 @@ source:
   git_rev: {{ build_version }}
 
 build:
-  number: 3
-  ignore_run_exports:
-    - libgcc-ng
-    - libstdcxx-ng
+  number: 4
 
 requirements:
   build: 
@@ -28,10 +25,6 @@ requirements:
     - make
     - nasm {{ nasm }} # [x86_64]
   host:
-    # Use pins to control cos6/cos7 match
-    - libgcc-ng  {{ libgcc }}
-    - libstdcxx-ng  {{ libstdcxx }}
-  run:
     # Use pins to control cos6/cos7 match
     - libgcc-ng  {{ libgcc }}
     - libstdcxx-ng  {{ libstdcxx }}
