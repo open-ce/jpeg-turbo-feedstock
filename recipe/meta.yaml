@@ -1,4 +1,4 @@
-{% set build_version = "2.0.5" %}
+{% set build_version = "2.1.0" %}
 
 package:
   name: jpeg-turbo
@@ -9,7 +9,7 @@ source:
   git_rev: {{ build_version }}
 
 build:
-  number: 4
+  number: 1
 
 requirements:
   build: 
