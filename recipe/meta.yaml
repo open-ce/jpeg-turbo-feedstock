@@ -15,12 +15,19 @@ requirements:
   build: 
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    # Use pins to control cos6/cos7 match
+    - libgcc-ng  {{ libgcc }}                          # [x86_64 and c_compiler_version == "7.2.*"]
+    - libstdcxx-ng  {{ libstdcxx }}                    # [x86_64 and c_compiler_version == "7.2.*"]
     - autoconf
     - automake
     - libtool
     - cmake {{ cmake }}
     - make
     - nasm {{ nasm }} # [x86_64]
+  host:
+    # Use pins to control cos6/cos7 match
+    - libgcc-ng  {{ libgcc }}                          # [x86_64 and c_compiler_version == "7.2.*"]
+    - libstdcxx-ng  {{ libstdcxx }}                    # [x86_64 and c_compiler_version == "7.2.*"]
 
 about:
   home: http://www.libjpeg-turbo.org/
