@@ -29,11 +29,8 @@ cmake -G"Unix Makefiles" -DCMAKE_INSTALL_PREFIX=$PREFIX/ \
       -DCMAKE_BUILD_TYPE=Release \
       -DENABLE_STATIC=1 \
       -DENABLE_SHARED=1 ..
-      #-DCMAKE_ASM_NASM_COMPILER=yasm ..
 
 # Build
 make
 make install
 
-# Move .so to $PREFIX/lib
-#cp $PREFIX/libjpeg-turbo/lib64/libjpeg.so.* $PREFIX/lib
